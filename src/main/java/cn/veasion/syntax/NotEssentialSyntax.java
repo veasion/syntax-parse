@@ -34,7 +34,7 @@ public class NotEssentialSyntax extends Syntax {
                     }
                 }
             }
-            if (!tryNext) {
+            if (!tryNext && counter != null) {
                 counter.addAndGet(_counter.get());
             }
         }

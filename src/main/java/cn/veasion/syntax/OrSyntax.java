@@ -58,7 +58,7 @@ public class OrSyntax extends Syntax {
             AtomicInteger _counter = tryNext ? null : new AtomicInteger();
             idx = syntax.match(dialog, start, entityMap, varMap, _counter, tryNext);
             if (idx != -1) {
-                if (!tryNext) {
+                if (!tryNext && counter != null) {
                     counter.addAndGet(_counter.get());
                 }
                 break;
